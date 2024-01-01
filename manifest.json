@@ -1,0 +1,960 @@
+{
+  "name": "Aitvaric",
+  "author": "Torango.io",
+  "version": "1.0.0",
+  "api_version": 2,
+  "default_locale": "en-us",
+  "settings": [
+    {
+      "label": "colors_group_label",
+      "variables": [
+        {
+          "identifier": "brand_color",
+          "type": "color",
+          "description": "brand_color_description",
+          "label": "brand_color_label",
+          "value": "rgba(244, 122, 134, 1)"
+        },
+        {
+          "identifier": "button_text_color",
+          "type": "color",
+          "description": "button_text_color_description",
+          "label": "button_text_color_label",
+          "value": "#FFFFFF"
+        },
+        {
+          "identifier": "text_color",
+          "type": "color",
+          "description": "text_color_description",
+          "label": "text_color_label",
+          "value": "#2F3941"
+        },
+        {
+          "identifier": "welcome_text_color",
+          "type": "color",
+          "description": "welcome_text_color_description",
+          "label": "welcome_text_color_label",
+          "value": "rgba(254, 255, 255, 1)"
+        },
+        {
+          "identifier": "link_color",
+          "type": "color",
+          "description": "link_color_description",
+          "label": "link_color_label",
+          "value": "rgba(57, 57, 57, 1)"
+        },
+        {
+          "identifier": "hover_link_color",
+          "type": "color",
+          "description": "hover_link_color_description",
+          "label": "hover_link_color_label",
+          "value": "rgba(244, 122, 134, 1)"
+        },
+        {
+          "identifier": "background_color",
+          "type": "color",
+          "description": "background_color_description",
+          "label": "background_color_label",
+          "value": "#FFFFFF"
+        },
+        {
+          "identifier": "background_accent_color",
+          "type": "color",
+          "description": "background_accent_color_description",
+          "label": "background_accent_color_label",
+          "value": "rgba(233, 233, 233, 1)"
+        },
+        {
+          "identifier": "sidepanel_color",
+          "type": "color",
+          "description": "sidepanel_color_description",
+          "label": "sidepanel_color_label",
+          "value": "#f2f2f2"
+        },
+        {
+          "identifier": "hero_color",
+          "type": "color",
+          "description": "hero_color_description",
+          "label": "hero_color_label",
+          "value": "#faaaaa"
+        },
+        {
+          "identifier": "block_color",
+          "type": "color",
+          "description": "block_color_description",
+          "label": "block_color_label",
+          "value": "#ffffff"
+        },
+        {
+          "identifier": "header_color",
+          "type": "color",
+          "description": "header_color_description",
+          "label": "header_color_label",
+          "value": "#ffffff"
+        },
+        {
+          "identifier": "footer_color",
+          "type": "color",
+          "description": "footer_color_description",
+          "label": "footer_color_label",
+          "value": "#dcdcdc"
+        }
+      ]
+    },
+    {
+      "label": "fonts_group_label",
+      "variables": [
+        {
+          "identifier": "heading_font",
+          "type": "list",
+          "description": "heading_font_description",
+          "label": "heading_font_label",
+          "value": "Futura, 'Century Gothic', sans-serif",
+          "options": [
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Impact",
+              "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Nunito",
+              "value": "Nunito, sans-serif"
+            },
+            {
+              "label": "Raleway",
+              "value": "Raleway, sans-serif"
+            },
+            {
+              "label": "Poppins",
+              "value": "Poppins, sans-serif"
+            }
+          ]
+        },
+        {
+          "identifier": "text_font",
+          "type": "list",
+          "description": "text_font_description",
+          "label": "text_font_label",
+          "value": "Futura, 'Century Gothic', sans-serif",
+          "options": [
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Impact",
+              "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            },
+            {
+              "label": "Nunito",
+              "value": "Nunito, sans-serif"
+            },
+            {
+              "label": "Raleway",
+              "value": "Raleway, sans-serif"
+            },
+            {
+              "label": "Poppins",
+              "value": "Poppins, sans-serif"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "brand_group_label",
+      "variables": [
+        {
+          "identifier": "logo",
+          "type": "file",
+          "description": "logo_description",
+          "label": "logo_label"
+        },
+        {
+          "identifier": "show_brand_name",
+          "type": "checkbox",
+          "description": "show_brand_name_description",
+          "label": "show_brand_name_label",
+          "value": true
+        },
+        {
+          "identifier": "favicon",
+          "type": "file",
+          "description": "favicon_description",
+          "label": "favicon_label"
+        }
+      ]
+    },
+    {
+      "label": "header_label",
+      "variables": [
+        {
+          "identifier": "separator_toggle",
+          "type": "checkbox",
+          "description": "separator_toggle_description",
+          "label": "separator_toggle_label",
+          "value": true
+        },
+        {
+          "identifier": "dark_mode_toggle",
+          "type": "checkbox",
+          "description": "dark_mode_description",
+          "label": "dark_mode_label",
+          "value": true
+        },
+        {
+          "identifier": "dark",
+          "type": "text",
+          "description": "dark_description",
+          "label": "dark_label",
+          "value": "Dark"
+        },
+        {
+          "identifier": "light",
+          "type": "text",
+          "description": "light_description",
+          "label": "light_label",
+          "value": "Light"
+        },
+        {
+          "identifier": "header_link_1_toggle",
+          "type": "checkbox",
+          "description": "header_link_1_toggle_description",
+          "label": "header_link_1_toggle_label",
+          "value": true
+        },
+        {
+          "identifier": "header_link_1",
+          "type": "text",
+          "description": "header_link_1_description",
+          "label": "header_link_1_label",
+          "value": "Header Link 1"
+        },
+        {
+          "identifier": "header_link_1_ref",
+          "type": "text",
+          "description": "header_link_1_ref_description",
+          "label": "header_link_1_ref_label",
+          "value": "#"
+        },
+        {
+          "identifier": "header_link_2_toggle",
+          "type": "checkbox",
+          "description": "header_link_2_toggle_description",
+          "label": "header_link_2_toggle_label",
+          "value": true
+        },
+        {
+          "identifier": "header_link_2",
+          "type": "text",
+          "description": "header_link_2_description",
+          "label": "header_link_2_label",
+          "value": "Header Link 2"
+        },
+        {
+          "identifier": "header_link_2_ref",
+          "type": "text",
+          "description": "header_link_2_ref_description",
+          "label": "header_link_2_ref_label",
+          "value": "#"
+        },
+        {
+          "identifier": "header_link_3_toggle",
+          "type": "checkbox",
+          "description": "header_link_3_toggle_description",
+          "label": "header_link_3_toggle_label",
+          "value": false
+        },
+        {
+          "identifier": "header_link_3",
+          "type": "text",
+          "description": "header_link_3_description",
+          "label": "header_link_3_label",
+          "value": "Header Link 3"
+        },
+        {
+          "identifier": "header_link_3_ref",
+          "type": "text",
+          "description": "header_link_3_ref_description",
+          "label": "header_link_3_ref_label",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "hero_group_label",
+      "variables": [
+        {
+          "identifier": "hero_welcome_message",
+          "type": "text",
+          "description": "hero_welcome_message_description",
+          "label": "hero_welcome_message_label",
+          "value": "Hi, how can we help?"
+        },
+        {
+          "identifier": "homepage_background_image",
+          "type": "file",
+          "description": "homepage_background_image_description",
+          "label": "homepage_background_image_label"
+        },
+        {
+          "identifier": "hero_layout",
+          "type": "list",
+          "description": "hero_layout_description",
+          "label": "hero_layout_label",
+          "value": "side-by-side",
+          "options": [
+            {
+              "label": "hero_full-width_label",
+              "value": "full-width"
+            },
+            {
+              "label": "hero_side-by-side_label",
+              "value": "side-by-side"
+            }
+          ]
+        },
+        {
+          "identifier": "popular_search_toggle",
+          "type": "checkbox",
+          "description": "popular_search_toggle_description",
+          "label": "popular_search_toggle_label",
+          "value": true
+        },
+        {
+          "identifier": "popular_search_title",
+          "type": "text",
+          "description": "popular_search_title_description",
+          "label": "popular_search_title_label",
+          "value": "Popular searches"
+        },
+        {
+          "identifier": "popular_search_1",
+          "type": "text",
+          "description": "popular_search_1_description",
+          "label": "popular_search_1_label",
+          "value": "articles"
+        },
+        {
+          "identifier": "popular_search_2",
+          "type": "text",
+          "description": "popular_search_2_description",
+          "label": "popular_search_2_label",
+          "value": "styling"
+        },
+        {
+          "identifier": "popular_search_3",
+          "type": "text",
+          "description": "popular_search_3_description",
+          "label": "popular_search_3_label",
+          "value": "what's new"
+        }
+      ]
+    },
+    {
+      "label": "community_group_label",
+      "variables": [
+        {
+          "identifier": "show_follow_post",
+          "type": "checkbox",
+          "description": "follow_post_description",
+          "label": "follow_post_label",
+          "value": true
+        },
+        {
+          "identifier": "show_post_sharing",
+          "type": "checkbox",
+          "description": "post_sharing_description",
+          "label": "post_sharing_label",
+          "value": true
+        },
+        {
+          "identifier": "show_follow_topic",
+          "type": "checkbox",
+          "description": "follow_topic_description",
+          "label": "follow_topic_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "search_group_label",
+      "variables": [
+        {
+          "identifier": "instant_search",
+          "type": "checkbox",
+          "description": "instant_search_description",
+          "label": "instant_search_label",
+          "value": true
+        },
+        {
+          "identifier": "scoped_kb_search",
+          "type": "checkbox",
+          "description": "scoped_knowledge_base_search_description",
+          "label": "scoped_knowledge_base_search_label",
+          "value": true
+        },
+        {
+          "identifier": "scoped_community_search",
+          "type": "checkbox",
+          "description": "scoped_community_search_description",
+          "label": "scoped_community_search_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "home_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_promoted_articles",
+          "type": "checkbox",
+          "description": "show_promoted_articles_description",
+          "label": "show_promoted_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_categories",
+          "type": "checkbox",
+          "description": "show_categories_description",
+          "label": "show_categories_label",
+          "value": false
+        },
+        {
+          "identifier": "block_1_title",
+          "type": "text",
+          "description": "block_1_title_description",
+          "label": "block_1_title_label",
+          "value": "Torango Academy"
+        },
+        {
+          "identifier": "block_1_description",
+          "type": "text",
+          "description": "block_1_description_description",
+          "label": "block_1_description_label",
+          "value": "Level up your Torango knowledge and get certified"
+        },
+        {
+          "identifier": "block_1_link",
+          "type": "text",
+          "description": "block_1_link_description",
+          "label": "block_1_link_label",
+          "value": "#"
+        },
+        {
+          "identifier": "block_1_image",
+          "type": "file",
+          "description": "block_1_image_description",
+          "label": "block_1_image_label"
+        },
+        {
+          "identifier": "block_2_title",
+          "type": "text",
+          "description": "block_2_title_description",
+          "label": "block_2_title_label",
+          "value": "API Documentation"
+        },
+        {
+          "identifier": "block_2_description",
+          "type": "text",
+          "description": "block_2_description_description",
+          "label": "block_2_description_label",
+          "value": "Build Torango into your app with our RESTful API"
+        },
+        {
+          "identifier": "block_2_link",
+          "type": "text",
+          "description": "block_2_link_description",
+          "label": "block_2_link_label",
+          "value": "#"
+        },
+        {
+          "identifier": "block_2_image",
+          "type": "file",
+          "description": "block_2_image_description",
+          "label": "block_2_image_label"
+        },
+        {
+          "identifier": "block_3_title",
+          "type": "text",
+          "description": "block_3_title_description",
+          "label": "block_3_title_label",
+          "value": "Submit a Ticket"
+        },
+        {
+          "identifier": "block_3_description",
+          "type": "text",
+          "description": "block_3_description_description",
+          "label": "block_3_description_label",
+          "value": "Need more help? Talk to one of our live agents"
+        },
+        {
+          "identifier": "block_3_link",
+          "type": "text",
+          "description": "block_3_link_description",
+          "label": "block_3_link_label",
+          "value": "/requests/new"
+        },
+        {
+          "identifier": "block_3_image",
+          "type": "file",
+          "description": "block_3_image_description",
+          "label": "block_3_image_label"
+        }
+      ]
+    },
+    {
+      "label": "dark_mode_colors_group_label",
+      "variables": [
+        {
+          "identifier": "dark_brand_color",
+          "type": "color",
+          "description": "dark_brand_color_description",
+          "label": "dark_brand_color_label",
+          "value": "rgba(138, 38, 225, 1)"
+        },
+        {
+          "identifier": "dark_button_text_color",
+          "type": "color",
+          "description": "dark_button_text_color_description",
+          "label": "dark_button_text_color_label",
+          "value": "rgba(228, 230, 235, 1)"
+        },
+        {
+          "identifier": "dark_text_color",
+          "type": "color",
+          "description": "dark_text_color_description",
+          "label": "dark_text_color_label",
+          "value": "rgba(228, 230, 235, 1)"
+        },
+        {
+          "identifier": "dark_welcome_text_color",
+          "type": "color",
+          "description": "dark_welcome_text_color_description",
+          "label": "dark_welcome_text_color_label",
+          "value": "rgba(228, 230, 235, 1)"
+        },
+        {
+          "identifier": "dark_link_color",
+          "type": "color",
+          "description": "dark_link_color_description",
+          "label": "dark_link_color_label",
+          "value": "rgba(228, 230, 235, 1)"
+        },
+        {
+          "identifier": "dark_hover_link_color",
+          "type": "color",
+          "description": "dark_hover_link_color_description",
+          "label": "dark_hover_link_color_label",
+          "value": "rgba(214, 170, 255, 1)"
+        },
+        {
+          "identifier": "dark_background_color",
+          "type": "color",
+          "description": "dark_background_color_description",
+          "label": "dark_background_color_label",
+          "value": "rgba(21, 32, 43, 1)"
+        },
+        {
+          "identifier": "dark_background_accent_color",
+          "type": "color",
+          "description": "dark_background_accent_color_description",
+          "label": "dark_background_accent_color_label",
+          "value": "rgba(56, 61, 80, 1)"
+        },
+        {
+          "identifier": "dark_sidepanel_color",
+          "type": "color",
+          "description": "dark_sidepanel_color_description",
+          "label": "dark_sidepanel_color_label",
+          "value": "rgba(54, 54, 54, 1)"
+        },
+        {
+          "identifier": "dark_hero_color",
+          "type": "color",
+          "description": "dark_hero_color_description",
+          "label": "dark_hero_color_label",
+          "value": "rgba(56, 61, 80, 1)"
+        },
+        {
+          "identifier": "dark_block_color",
+          "type": "color",
+          "description": "dark_block_color_description",
+          "label": "dark_block_color_label",
+          "value": "rgba(56, 61, 80, 1)"
+        },
+        {
+          "identifier": "dark_header_color",
+          "type": "color",
+          "description": "dark_header_color_description",
+          "label": "dark_header_color_label",
+          "value": "rgba(54, 54, 54, 1)"
+        },
+        {
+          "identifier": "dark_footer_color",
+          "type": "color",
+          "description": "dark_footer_color_description",
+          "label": "dark_footer_color_label",
+          "value": "rgba(56, 61, 80, 1)"
+        }
+      ]
+    },
+    {
+      "label": "dark_mode_images_group_label",
+      "variables": [
+        {
+          "identifier": "dark_hero_image",
+          "type": "file",
+          "description": "dark_hero_image_description",
+          "label": "dark_hero_image_label"
+        },
+        {
+          "identifier": "dark_logo",
+          "type": "file",
+          "description": "dark_logo_description",
+          "label": "dark_logo_label"
+        },
+        {
+          "identifier": "dark_block_1_image",
+          "type": "file",
+          "description": "dark_block_1_image_description",
+          "label": "dark_block_1_image_label"
+        },
+        {
+          "identifier": "dark_block_2_image",
+          "type": "file",
+          "description": "dark_block_2_image_description",
+          "label": "dark_block_2_image_label"
+        },
+        {
+          "identifier": "dark_block_3_image",
+          "type": "file",
+          "description": "dark_block_3_image_description",
+          "label": "dark_block_3_image_label"
+        }
+      ]
+    },
+    {
+      "label": "article_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_table_of_contents",
+          "type": "checkbox",
+          "description": "show_table_of_contents_description",
+          "label": "show_table_of_contents_label",
+          "value": true
+        },
+        {
+          "identifier": "table_of_contents_title",
+          "type": "text",
+          "description": "table_of_contents_title_description",
+          "label": "table_of_contents_title_label",
+          "value": "Contents"
+        },
+        {
+          "identifier": "show_article_author",
+          "type": "checkbox",
+          "description": "article_author_description",
+          "label": "article_author_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_comments",
+          "type": "checkbox",
+          "description": "article_comments_description",
+          "label": "article_comments_label",
+          "value": true
+        },
+        {
+          "identifier": "show_follow_article",
+          "type": "checkbox",
+          "description": "follow_article_description",
+          "label": "follow_article_label",
+          "value": true
+        },
+        {
+          "identifier": "show_recently_viewed_articles",
+          "type": "checkbox",
+          "description": "recently_viewed_articles_description",
+          "label": "recently_viewed_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_related_articles",
+          "type": "checkbox",
+          "description": "related_articles_description",
+          "label": "related_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_sharing",
+          "type": "checkbox",
+          "description": "article_sharing_description",
+          "label": "article_sharing_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "footer_group_label",
+      "variables": [
+        {
+          "identifier": "footer_description",
+          "type": "text",
+          "description": "footer_description_description",
+          "label": "footer_description_label",
+          "value": "® 2023 Torango.io All rights reserved"
+        },
+        {
+          "identifier": "footer_group_1_title",
+          "type": "text",
+          "description": "footer_group_1_title_description",
+          "label": "footer_group_1_title_label",
+          "value": "Footer group 1"
+        },
+        {
+          "identifier": "footer_group_1_text_1",
+          "type": "text",
+          "description": "footer_group_1_text_1_description",
+          "label": "footer_group_1_text_1_label",
+          "value": "Link 1"
+        },
+        {
+          "identifier": "footer_group_1_link_1",
+          "type": "text",
+          "description": "footer_group_1_link_1_description",
+          "label": "footer_group_1_link_1_label",
+          "value": "#"
+        },
+        {
+          "identifier": "footer_group_1_text_2",
+          "type": "text",
+          "description": "footer_group_1_text_2_description",
+          "label": "footer_group_1_text_2_label",
+          "value": "Link 2"
+        },
+        {
+          "identifier": "footer_group_1_link_2",
+          "type": "text",
+          "description": "footer_group_1_link_2_description",
+          "label": "footer_group_1_link_2_label",
+          "value": "#"
+        },
+        {
+          "identifier": "footer_group_1_text_3",
+          "type": "text",
+          "description": "footer_group_1_text_3_description",
+          "label": "footer_group_1_text_3_label",
+          "value": "Link 3"
+        },
+        {
+          "identifier": "footer_group_1_link_3",
+          "type": "text",
+          "description": "footer_group_1_link_3_description",
+          "label": "footer_group_1_link_3_label",
+          "value": "#1"
+        },
+        {
+          "identifier": "footer_group_2_title",
+          "type": "text",
+          "description": "footer_group_2_title_description",
+          "label": "footer_group_2_title_label",
+          "value": "Footer group 2"
+        },
+        {
+          "identifier": "footer_group_2_text_1",
+          "type": "text",
+          "description": "footer_group_2_text_1_description",
+          "label": "footer_group_2_text_1_label",
+          "value": "Link 1"
+        },
+        {
+          "identifier": "footer_group_2_link_1",
+          "type": "text",
+          "description": "footer_group_2_link_1_description",
+          "label": "footer_group_2_link_1_label",
+          "value": "#1"
+        },
+        {
+          "identifier": "footer_group_2_text_2",
+          "type": "text",
+          "description": "footer_group_2_text_2_description",
+          "label": "footer_group_2_text_2_label",
+          "value": "Link 2"
+        },
+        {
+          "identifier": "footer_group_2_link_2",
+          "type": "text",
+          "description": "footer_group_1_link_2_description",
+          "label": "footer_group_2_link_2_label",
+          "value": "#"
+        },
+        {
+          "identifier": "footer_group_2_text_3",
+          "type": "text",
+          "description": "footer_group_2_text_3_description",
+          "label": "footer_group_2_text_3_label",
+          "value": "Link 3"
+        },
+        {
+          "identifier": "footer_group_2_link_3",
+          "type": "text",
+          "description": "footer_group_2_link_3_description",
+          "label": "footer_group_2_link_3_label",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "section_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_follow_section",
+          "type": "checkbox",
+          "description": "follow_section_description",
+          "label": "follow_section_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "request_list_group_label",
+      "variables": [
+        {
+          "identifier": "request_list_beta",
+          "type": "checkbox",
+          "description": "request_list_beta_description",
+          "label": "request_list_beta_label",
+          "value": false
+        }
+      ]
+    },
+    {
+      "label": "translations_group_label",
+      "variables": [
+        {
+          "identifier": "translations_toggle",
+          "type": "checkbox",
+          "description": "translations_toggle_description",
+          "label": "translations_toggle_label",
+          "value": false
+        }
+      ]
+    }
+  ]
+}

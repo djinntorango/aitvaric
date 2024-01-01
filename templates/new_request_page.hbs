@@ -1,0 +1,38 @@
+<div class="top-panel">
+  <div class="top-panel-cl">
+    <div class="panel-title">{{breadcrumbs}}</div>
+    <div class="top-chevron"></div>
+  </div>
+  <ul class="top-categories-list" id="top-categories-list">
+    <!-- Categories will be dynamically added here -->
+  </ul>
+</div>
+<aside class="side-panel">
+    <nav class="sub-nav">
+      <div class="search-container">
+        {{search scoped=settings.scoped_kb_search submit=false}}
+      </div>
+      <ol class="breadcrumbs">
+     {{breadcrumbs}}
+      </ol>
+    </nav>
+  <!-- Add content for side panel here -->
+  <ul class="categories-list" id="categories-list">
+    <!-- Categories will be dynamically added here -->
+  </ul>
+</aside>
+<div class="container">
+<div class="inner-container">
+
+  <h1>
+    {{t 'submit_a_request'}}
+    <span class="follow-up-hint">
+      {{follow_up}}
+    </span>
+  </h1>
+
+  <div id="main-content" class="form">
+    {{request_form wysiwyg=true}}
+  </div>
+</div>
+</div>

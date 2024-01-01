@@ -1,0 +1,162 @@
+<a class="skip-navigation" tabindex="1" href="#main-content">{{t 'skip_navigation' }}</a>
+
+<header class="header">
+  <div class="header-left">
+  <div class="logo">
+    {{#if settings.show_brand_name}}
+    {{#link 'help_center'}}
+      <span class="logo-image" alt="{{t 'home_page' name=help_center.name}}" />
+        <span aria-hidden="true" class="logo-name">{{help_center.name}}</span>
+    {{/link}}
+    {{else}}
+    <span class="logo-image" alt="{{t 'home_page' name=help_center.name}}" />
+    {{/if}}
+  </div>
+    {{#if settings.separator_toggle}}
+    <div class="vertical-line"></div>
+    {{/if}}
+  <div class="nav-wrapper-desktop">
+    <nav class="user-nav" id="user-nav">
+      <ul class="user-nav-list">
+        <li>{{link 'community'}}</li>
+        
+        <!--Custom header links-->
+        {{#isnt settings.header_link_1_toggle false}}
+        <li>{{#if settings.translations_toggle}}<a href="{{dc 'header_link_1_ref'}}">{{dc 'header_link_1'}}</a>{{else}}<a href="{{settings.header_link_1_ref}}">{{settings.header_link_1}}</a>{{/if}}</li>
+        {{/isnt}}
+        {{#isnt settings.header_link_2_toggle false}}
+        <li>{{#if settings.translations_toggle}}<a href="{{dc 'header_link_2_ref'}}">{{dc 'header_link_2'}}</a>{{else}}<a href="{{settings.header_link_2_ref}}">{{settings.header_link_2}}</a>{{/if}}</li>
+        {{/isnt}}
+        {{#isnt settings.header_link_3_toggle false}}
+        <li>{{#if settings.translations_toggle}}<a href="{{dc 'header_link_3_ref'}}">{{dc 'header_link_3'}}</a>{{else}}<a href="{{settings.header_link_3_ref}}">{{settings.header_link_3}}</a>{{/if}}</li>
+        {{/isnt}}
+        <li>{{link 'new_request' class='submit-a-request'}}</li>
+      </ul>
+    </nav>
+  </div>
+  </div>
+
+  <div class="nav-wrapper-desktop">
+        {{#unless signed_in}}
+            {{#link "sign_in" class="sign-in"}}
+              {{t 'sign_in'}}
+            {{/link}}
+        {{/unless}}
+    {{#if signed_in}}
+      <div class="user-info dropdown">
+        <button class="dropdown-toggle" aria-haspopup="true">
+          {{user_avatar class="user-avatar"}}
+          <span>
+            {{user_name}}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="dropdown-chevron-icon" aria-hidden="true">
+              <path fill="none" stroke="currentColor" stroke-linecap="round" d="M3 4.5l2.6 2.6c.2.2.5.2.7 0L9 4.5"/>
+            </svg>
+          </span>
+        </button>
+        <div class="dropdown-menu" role="menu">
+          {{#my_profile role="menuitem"}}{{t 'profile'}}{{/my_profile}}
+          {{link "requests" role="menuitem"}}
+          {{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}
+          {{contact_details role="menuitem"}}
+          {{change_password role="menuitem"}}
+          <div class="separator" role="separator"></div>
+          {{link "sign_out" role="menuitem"}}
+        </div>
+      </div>
+    {{/if}}
+    {{#if settings.dark_mode_toggle}}      <!--Toggle for dark/light mode if enabled-->
+<div class="dark-mode-toggle">
+  <input type="checkbox" id="dark-mode-switch" class="slider">
+  <label for="dark-mode-switch" class="slider-label">
+    <span class="slider-text light-text">{{#if settings.translations_toggle}}{{dc 'light'}}{{else}}{{settings.light}}{{/if}}</span>
+    <span class="slider-text dark-text">{{#if settings.translations_toggle}}{{dc 'dark'}}{{else}}{{settings.dark}}{{/if}}</span>
+  </label>
+</div>
+    {{/if}}
+  </div>
+
+  <!--Mobile header-->
+  <div class="nav-wrapper-mobile">
+    {{#if settings.dark_mode_toggle}}
+          <div class="dark-mode-toggle-mobile">
+  			<input type="checkbox" id="dark-mode-switch-mobile" class="slider-mobile">
+ 		 		<label for="dark-mode-switch-mobile" class="slider-label-mobile">
+   	  	<div class="slider-circle"></div>
+  			</label>
+			</div>
+    {{/if}}
+    <button class="menu-button-mobile" aria-controls="user-nav-mobile" aria-expanded="false" aria-label="{{t 'toggle_navigation'}}">
+      {{#if signed_in}}
+        {{user_avatar class="user-avatar"}}
+      {{/if}}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-menu">
+        <path fill="none" class="menu-button-icon" stroke-linecap="round" d="M1.5 3.5h13m-13 4h13m-13 4h13"/>
+      </svg>
+    </button>
+    <nav class="menu-list-mobile" id="user-nav-mobile" aria-expanded="false">
+      <ul class="menu-list-mobile-items">
+        {{#if signed_in}}
+          <li class="user-avatar-item item">
+            {{#my_profile role="menuitem" class="my-profile"}}
+              {{user_avatar class="menu-profile-avatar"}}
+              <div class="menu-profile-name">
+                <div>{{user_name}}</div>
+                <div class="my-profile-tooltip">{{t 'profile'}}</div>
+              </div>
+            {{/my_profile}}
+          </li>
+          <li class="item">{{link "requests" role="menuitem"}}</li>
+          <li class="item">{{#link "contributions" role="menuitem"}}{{t "activities"}}{{/link}}</li>
+          <li class="item">{{contact_details role="menuitem"}}</li>
+          <li class="item">{{change_password role="menuitem" class='change-password'}}</li>
+          <li class="nav-divider"></li>
+        {{else}}
+          <li class="item">
+            {{#link "sign_in" role="menuitem"}}
+              {{t 'sign_in'}}
+            {{/link}}
+          </li>
+          <li class="nav-divider"></li>
+        {{/if}}
+        <li class="item">{{link 'community' role="menuitem"}}</li>
+                {{#isnt settings.header_link_1_toggle false}}
+        <li>{{#if settings.translations_toggle}}<a href="{{dc 'header_link_1_ref'}}">{{dc 'header_link_1'}}</a>{{else}}<a href="{{settings.header_link_1_ref}}">			{{settings.header_link_1}}</a>{{/if}}</li>
+        {{/isnt}}
+        {{#isnt settings.header_link_2_toggle false}}
+        <li>{{#if settings.translations_toggle}}<a href="{{dc 'header_link_2_ref'}}">{{dc 'header_link_2'}}</a>{{else}}<a href="{{settings.header_link_2_ref}}">{{settings.header_link_2}}</a>{{/if}}</li>
+        {{/isnt}}
+        <li class="item">{{link 'new_request' role="menuitem" class='submit-a-request'}}</li>
+        <li class="nav-divider"></li>
+        {{#if signed_in}}
+          <li class="item">
+            {{link "sign_out" role="menuitem"}}
+          </li>
+        {{/if}}
+      </ul>
+    </nav>
+  </div>
+
+</header>
+
+<!--Additional script to sync the dark mode sliders between mobile and desktop view-->
+<script>
+  // Sync the dark mode sliders for desktop and mobile
+  const desktopSlider = document.getElementById('dark-mode-switch');
+  const mobileSlider = document.getElementById('dark-mode-switch-mobile');
+
+  const updateOtherSlider = (sourceSlider, targetSlider) => {
+    if (targetSlider) {
+      targetSlider.checked = sourceSlider.checked;
+    }
+  };
+
+  if (desktopSlider && mobileSlider) {
+    desktopSlider.addEventListener('change', () => {
+      updateOtherSlider(desktopSlider, mobileSlider);
+    });
+
+    mobileSlider.addEventListener('change', () => {
+      updateOtherSlider(mobileSlider, desktopSlider);
+    });
+  }
+</script>
