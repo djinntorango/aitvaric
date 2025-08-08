@@ -5707,3 +5707,29 @@ padding: 0;
 [dir=rtl] .section-tree-title {
   text-align: right;
 }
+
+/***** 6. Link Container & Chevron RTL Support *****/
+/* Link container padding to prevent chevron flush with screen edge */
+[dir=rtl] .link-container {
+  padding-left: 20px;
+}
+
+/* Subsections list RTL alignment */
+[dir=rtl] .subsections-list {
+  padding-left: 0;
+  padding-right: 20px;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+/* Responsive RTL link container spacing */
+@media (max-width: 768px) {
+  [dir=rtl] .link-container {
+    padding-left: 15px;
+  }
+  
+  [dir=rtl] .subsections-list {
+    padding-right: 15px;
+    margin-right: 15px;
+  }
+}
