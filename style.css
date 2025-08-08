@@ -5472,7 +5472,7 @@ padding: 0;
 }
 
 [dir=rtl] .vertical-line {
-  margin-right: 0;
+  margin-right: 20px;
   margin-left: 20px;
   border-left: none;
   border-right: 4px solid var(--text-color);
@@ -5714,13 +5714,6 @@ padding: 0;
   padding-left: 20px;
 }
 
-/* Subsections list RTL alignment */
-[dir=rtl] .subsections-list {
-  padding-left: 0;
-  padding-right: 20px;
-  margin-left: 0;
-  margin-right: 20px;
-}
 
 /* Responsive RTL link container spacing */
 @media (max-width: 768px) {
