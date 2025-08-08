@@ -1,0 +1,24 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" width="600px" height="600px" viewBox="0 0 600 600">
+<defs>
+<image id="_b79268af_8899_4b38_90a5_9e9c9fe69fa7_jpg" x="0" y="0" width="1024" height="1024" xlink:href="./images/_b79268af_8899_4b38_90a5_9e9c9fe69fa7_jpg.jpg"/>
+
+<path id="Layer3_0_1_STROKES" stroke="#F47A86" stroke-width="34" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+M 135.6 383.3
+L 153.65 411.75 153.65 288.4 106.95 261.2 300.75 116.6 496.6 261.2 434.15 299.05 397.25 321.2 397.25 379.2
+Q 300.3 434.4 206.3 376
+L 206.3 319.05 172.05 299.1 153.65 288.4
+M 172.05 299.1
+L 302.1 202.9 434.15 299.05
+M 397.25 321.2
+Q 300.45 378.8 206.3 319.05"/>
+</defs>
+
+<g transform="matrix( 1, 0, 0, 1, -1133,-423) ">
+<use xlink:href="#_b79268af_8899_4b38_90a5_9e9c9fe69fa7_jpg"/>
+</g>
+
+<g transform="matrix( 1, 0, 0, 1, 0,0) ">
+<use xlink:href="#Layer3_0_1_STROKES"/>
+</g>
+</svg>
