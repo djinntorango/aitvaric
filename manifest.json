@@ -1,7 +1,7 @@
 {
   "name": "Aitvaric",
   "author": "Torango.io",
-  "version": "1.0.51",
+  "version": "1.0.52",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -818,7 +818,7 @@
           "type": "text",
           "description": "footer_description_description",
           "label": "footer_description_label",
-          "value": "® 2023 Torango.io All rights reserved"
+          "value": "® 2025 Torango.io All rights reserved"
         },
         {
           "identifier": "footer_group_1_title",

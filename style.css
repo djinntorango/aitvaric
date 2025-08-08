@@ -1197,6 +1197,7 @@ ul {
   display: flex;
   justify-content: space-between;
   background: var(--footer-color);
+  gap: 6px;
 }
 @media (min-width: 1160px) {
   .footer-inner {
