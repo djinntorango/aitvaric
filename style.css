@@ -5494,9 +5494,6 @@ padding: 0;
 
 /* Mobile RTL header adjustments */
 @media (max-width: 1024px) {
-  [dir=rtl] .logo-image {
-    padding-right: 20px;
-  }
   
   [dir=rtl] .header-left {
     flex-direction: row;
