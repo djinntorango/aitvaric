@@ -5458,6 +5458,17 @@ padding: 0;
 [dir=rtl] .logo-image {
   padding-left: 0;
   padding-right: 40px;
+  background-position: right center;
+}
+
+/* Logo text spacing adjustments for RTL */
+[dir=rtl] .logo span {
+  margin: 0 10px 0 0;
+}
+
+/* Header left container spacing for RTL */
+[dir=rtl] .header-left {
+  flex-direction: row-reverse;
 }
 
 [dir=rtl] .vertical-line {
@@ -5465,11 +5476,42 @@ padding: 0;
   margin-left: 20px;
   border-left: none;
   border-right: 4px solid var(--text-color);
+  order: -1;
+}
+
+/* Additional header layout fixes for RTL */
+[dir=rtl] .header {
+  direction: rtl;
+}
+
+[dir=rtl] .nav-wrapper-desktop {
+  order: 1;
 }
 
 /* Navigation wrapper adjustments */
 [dir=rtl] .nav-wrapper-desktop a {
   margin: 0 0 0 20px;
+}
+
+/* Mobile RTL header adjustments */
+@media (max-width: 1024px) {
+  [dir=rtl] .logo-image {
+    padding-right: 20px;
+  }
+  
+  [dir=rtl] .header-left {
+    flex-direction: row;
+  }
+  
+  [dir=rtl] .vertical-line {
+    order: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  [dir=rtl] .logo span {
+    margin: 0 5px 0 0;
+  }
 }
 
 /* User info button adjustments */
