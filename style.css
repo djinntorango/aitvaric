@@ -5468,7 +5468,7 @@ padding: 0;
 
 /* Header left container spacing for RTL */
 [dir=rtl] .header-left {
-  flex-direction: row-reverse;
+  flex-direction: row;
 }
 
 [dir=rtl] .vertical-line {
@@ -5476,7 +5476,6 @@ padding: 0;
   margin-left: 20px;
   border-left: none;
   border-right: 4px solid var(--text-color);
-  order: -1;
 }
 
 /* Additional header layout fixes for RTL */
@@ -5504,7 +5503,7 @@ padding: 0;
   }
   
   [dir=rtl] .vertical-line {
-    order: 0;
+    margin-left: 15px;
   }
 }
 
