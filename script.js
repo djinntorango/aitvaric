@@ -732,7 +732,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
 
   // Make an API call to get categories using your domain
-  const apiUrl = `https://${domain}/api/v2/help_center/en-us/categories?per_page=100.json`;
+  const apiUrl = `https://${domain}/api/v2/help_center/categories?per_page=100.json`;
 
   fetch(apiUrl)
     .then(response => response.json())
@@ -756,7 +756,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function fetchSectionsForCategories(categories) {
   // Create an array to hold promises for each fetch operation
   const sectionPromises = categories.map(category => {
-    const sectionApiUrl = `https://${domain}/api/v2/help_center/en-us/categories/${category.id}/sections?per_page=100.json`;
+    const sectionApiUrl = `https://${domain}/api/v2/help_center/categories/${category.id}/sections?per_page=100.json`;
 
     return fetch(sectionApiUrl)
       .then(response => response.json())
@@ -848,7 +848,7 @@ function renderCategories(data) {
     const categoryLink = document.createElement('a');
 
     // Set the href attribute to the URL with the category ID
-    categoryLink.href = `https://${domain}/hc/en-us/categories/${category.id}-${encodeURIComponent(category.name)}`;
+    categoryLink.href = `https://${domain}/hc/categories/${category.id}-${encodeURIComponent(category.name)}`;
 
     // Set the text content of the anchor element
     categoryLink.textContent = category.name;
@@ -885,7 +885,7 @@ function renderSections(sections, parentElement) {
     
     // Set the href attribute to the URL with the section ID
     const sectionLink = document.createElement('a');
-    sectionLink.href = `https://${domain}/hc/en-us/sections/${section.id}-${encodeURIComponent(section.name)}`;
+    sectionLink.href = `https://${domain}/hc/sections/${section.id}-${encodeURIComponent(section.name)}`;
     sectionLink.textContent = section.name;
     linkContainer.appendChild(sectionLink);
 
