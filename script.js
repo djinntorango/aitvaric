@@ -1037,43 +1037,4 @@ if (desktopDarkToggle && mobileDarkToggle) {
   mobileDarkToggle.addEventListener('change', toggleDarkMode);
 }
 
-// Import Mixpanel and initialize it
-mixpanel.init("4c504c9fcc20e32766f3b79a083962bb", {
-  debug: true,
-  track_pageview: true,
-  persistence: "localStorage",
-});
 
-// Example of tracking a page view event
-mixpanel.track("Page Viewed", {
-  page: document.title,
-});
-
-// Function to track events in Mixpanel
-function trackEvent(eventName, properties = {}) {
-  console.log("Tracking event:", eventName, properties); // Debugging
-  mixpanel.track(eventName, {
-    ...properties,
-    page: document.title,
-    url: window.location.href,
-  });
-}
-
-
-
-// Wait for the Zendesk Web SDK to be ready
-window.zE('messenger:on', 'open', function() {
-  trackEvent('Messaging Widget Opened');
-});
-
-window.zE('messenger:on', 'close', function() {
-  trackEvent('Messaging Widget Closed');
-});
-
-window.zE('messenger:on', 'unreadMessages', function(count) {
-  if (count === 1) {  
-    trackEvent('Unread Messages', { count: count });
-  } else if (count === 0) {
-    return
-  }
-});
