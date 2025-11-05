@@ -7,7 +7,10 @@
     <!-- Categories will be dynamically added here -->
   </ul>
 </div>
-<aside class="side-panel">
+<aside class="side-panel"
+       data-display-mode="{{settings.side_panel_display_mode}}"
+       data-article-limit="{{settings.side_panel_article_limit}}"
+       data-articles-expanded="{{settings.side_panel_articles_expanded}}">
     <nav class="sub-nav">
       <div class="search-container">
         {{search scoped=settings.scoped_kb_search submit=false}}

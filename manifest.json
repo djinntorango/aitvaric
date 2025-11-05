@@ -1,7 +1,7 @@
 {
   "name": "Aitvaric",
   "author": "Torango.io",
-  "version": "1.0.54",
+  "version": "1.0.56",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -929,6 +929,49 @@
           "description": "follow_section_description",
           "label": "follow_section_label",
           "value": true
+        }
+      ]
+    },
+    {
+      "label": "side_panel_navigation_group_label",
+      "variables": [
+        {
+          "identifier": "side_panel_display_mode",
+          "type": "list",
+          "description": "side_panel_display_mode_description",
+          "label": "side_panel_display_mode_label",
+          "value": "sections_only",
+          "options": [
+            {
+              "label": "side_panel_sections_only_label",
+              "value": "sections_only"
+            },
+            {
+              "label": "side_panel_articles_only_label",
+              "value": "articles_only"
+            },
+            {
+              "label": "side_panel_both_label",
+              "value": "both"
+            }
+          ]
+        },
+        {
+          "identifier": "side_panel_article_limit",
+          "type": "range",
+          "description": "side_panel_article_limit_description",
+          "label": "side_panel_article_limit_label",
+          "value": 10,
+          "min": 1,
+          "max": 50,
+          "step": 1
+        },
+        {
+          "identifier": "side_panel_articles_expanded",
+          "type": "checkbox",
+          "description": "side_panel_articles_expanded_description",
+          "label": "side_panel_articles_expanded_label",
+          "value": false
         }
       ]
     },

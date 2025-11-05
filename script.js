@@ -730,6 +730,18 @@ document.addEventListener("DOMContentLoaded", function () {
   var domain = window.location.hostname;
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Get settings from the side-panel data attributes
+  const sidePanel = document.querySelector('.side-panel');
+  const displayMode = sidePanel ? sidePanel.getAttribute('data-display-mode') : 'sections_only';
+  const articleLimit = sidePanel ? parseInt(sidePanel.getAttribute('data-article-limit'), 10) : 10;
+  const articlesExpanded = sidePanel ? sidePanel.getAttribute('data-articles-expanded') === 'true' : false;
+
+  // Store settings globally for use in render functions
+  window.sidePanelSettings = {
+    displayMode: displayMode,
+    articleLimit: articleLimit,
+    articlesExpanded: articlesExpanded
+  };
 
   // Make an API call to get categories using your domain
   const apiUrl = `https://${domain}/api/v2/help_center/categories?per_page=100.json`;
@@ -764,11 +776,27 @@ function fetchSectionsForCategories(categories) {
         // Process the sections data if needed
         const processedSections = processSectionsData(sectionsData);
 
-        // Update the category object with sections
-        return {
-          ...category,
-          sections: processedSections
-        };
+        // Check if we need to fetch articles based on display mode
+        const settings = window.sidePanelSettings || { displayMode: 'sections_only', articleLimit: 10 };
+        const shouldFetchArticles = settings.displayMode === 'both' || settings.displayMode === 'articles_only';
+
+        if (shouldFetchArticles && processedSections.length > 0) {
+          // Fetch articles for all sections in this category
+          return fetchArticlesForSections(processedSections, settings.articleLimit)
+            .then(() => {
+              // Update the category object with sections (now including articles)
+              return {
+                ...category,
+                sections: processedSections
+              };
+            });
+        } else {
+          // Update the category object with sections (no articles)
+          return {
+            ...category,
+            sections: processedSections
+          };
+        }
       })
       .catch(error => {
         console.error(`Failed to fetch sections for category ${category.id}`, error);
@@ -817,6 +845,63 @@ function processSectionsData(sectionsData) {
     console.error('Invalid sections data:', sectionsData);
     return []; // Return an empty array if the data is not as expected
   }
+}
+
+// Function to process articles data
+function processArticlesData(articlesData, limit) {
+  if (articlesData && Array.isArray(articlesData.articles)) {
+    // Sort by position, then take the limit
+    const sortedArticles = articlesData.articles
+      .sort((a, b) => a.position - b.position)
+      .slice(0, limit);
+
+    return sortedArticles.map(article => ({
+      id: article.id,
+      title: article.title,
+      url: article.html_url,
+      promoted: article.promoted,
+      internal: article.internal,
+      position: article.position
+    }));
+  } else {
+    console.error('Invalid articles data:', articlesData);
+    return [];
+  }
+}
+
+// Function to fetch articles for a section
+function fetchArticlesForSection(sectionId, limit) {
+  const articlesApiUrl = `https://${domain}/api/v2/help_center/sections/${sectionId}/articles.json?per_page=100`;
+
+  return fetch(articlesApiUrl)
+    .then(response => response.json())
+    .then(articlesData => {
+      return processArticlesData(articlesData, limit);
+    })
+    .catch(error => {
+      console.error(`Failed to fetch articles for section ${sectionId}`, error);
+      return [];
+    });
+}
+
+// Function to fetch articles for all sections recursively
+function fetchArticlesForSections(sections, limit) {
+  const articlePromises = sections.map(section => {
+    return fetchArticlesForSection(section.id, limit)
+      .then(articles => {
+        section.articles = articles;
+
+        // If section has children, recursively fetch articles for them
+        if (section.children && section.children.length > 0) {
+          return fetchArticlesForSections(section.children, limit)
+            .then(() => section);
+        }
+
+        return section;
+      });
+  });
+
+  return Promise.all(articlePromises);
 }
 
 // Function to process categories data (adjust based on your actual data structure)
@@ -882,15 +967,18 @@ function renderSections(sections, parentElement) {
     // Container for the link and chevron
     const linkContainer = document.createElement('div');
     linkContainer.classList.add('link-container');
-    
+
     // Set the href attribute to the URL with the section ID
     const sectionLink = document.createElement('a');
     sectionLink.href = `https://${domain}/hc/sections/${section.id}-${encodeURIComponent(section.name)}`;
     sectionLink.textContent = section.name;
     linkContainer.appendChild(sectionLink);
 
-    // If the section has children, append a chevron for toggling visibility
-    if (section.children && section.children.length > 0) {
+    // Check if section has children OR articles - both need chevrons
+    const hasChildren = section.children && section.children.length > 0;
+    const hasArticles = section.articles && section.articles.length > 0;
+
+    if (hasChildren || hasArticles) {
       const chevron = document.createElement('span');
       chevron.classList.add('chevron');
       linkContainer.appendChild(chevron);
@@ -900,16 +988,20 @@ function renderSections(sections, parentElement) {
     sectionItem.appendChild(linkContainer);
 
     // If the section has children, render subsections recursively
-    if (section.children && section.children.length > 0) {
+    if (hasChildren) {
       const subsectionsList = document.createElement('ul');
       subsectionsList.classList.add('subsections-list');
-
 
       // Render subsections recursively
       renderSections(section.children, subsectionsList);
 
       // Append the subsections list to the section item
       sectionItem.appendChild(subsectionsList);
+    }
+
+    // If the section has articles, render them
+    if (hasArticles) {
+      renderArticles(section.articles, sectionItem);
     }
 
     // Append the section item to the sections list
@@ -920,12 +1012,62 @@ function renderSections(sections, parentElement) {
   parentElement.appendChild(sectionsList);
 }
 
+function renderArticles(articles, parentElement) {
+  if (!articles || articles.length === 0) return;
+
+  const articlesList = document.createElement('ul');
+  articlesList.classList.add('articles-list');
+
+  // Check if articles should be initially expanded
+  const settings = window.sidePanelSettings || { articlesExpanded: false };
+  if (!settings.articlesExpanded) {
+    articlesList.style.display = 'none';
+  }
+
+  articles.forEach(article => {
+    const articleItem = document.createElement('li');
+    articleItem.classList.add('article-item');
+
+    const articleLink = document.createElement('a');
+    articleLink.href = article.url;
+    articleLink.textContent = article.title;
+    articleLink.classList.add('article-link');
+
+    articleItem.appendChild(articleLink);
+
+    // Optional: Add icon for promoted articles
+    if (article.promoted) {
+      articleItem.classList.add('article-promoted');
+    }
+
+    // Optional: Add icon for internal articles
+    if (article.internal) {
+      articleItem.classList.add('article-internal');
+    }
+
+    articlesList.appendChild(articleItem);
+  });
+
+  parentElement.appendChild(articlesList);
+}
+
 document.addEventListener('click', function (event) {
   const chevron = event.target;
   if (chevron.classList.contains('chevron')) {
     const parentSection = chevron.closest('.open-section');
     const subsectionsList = parentSection.querySelector('.subsections-list');
-    subsectionsList.style.display = subsectionsList.style.display === 'block' ? 'none' : 'block';
+    const articlesList = parentSection.querySelector('.articles-list');
+
+    // Toggle subsections if they exist
+    if (subsectionsList) {
+      subsectionsList.style.display = subsectionsList.style.display === 'block' ? 'none' : 'block';
+    }
+
+    // Toggle articles if they exist
+    if (articlesList) {
+      articlesList.style.display = articlesList.style.display === 'block' ? 'none' : 'block';
+    }
+
     chevron.classList.toggle('rotate-chevron');
   }
 });
