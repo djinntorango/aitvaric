@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Titlul deasupra tabelului de conținut",
   "table_of_contents_title_label": "Titlul tabelului de conținut",
   "separator_toggle_description": "Include separatorul în antet",
-  "separator_toggle_label": "Arată separatorul"
+  "separator_toggle_label": "Arată separatorul",
+  "show_categories_description": "Afișează categoriile pe pagina de pornire",
+  "show_categories_label": "Afișează categoriile",
+  "side_panel_navigation_group_label": "Navigare panou lateral",
+  "show_articles_in_navigation_description": "Afișează articole sub secțiuni în navigarea panoului lateral",
+  "show_articles_in_navigation_label": "Afișează articole în navigare",
+  "side_panel_article_limit_description": "Numărul maxim de articole de afișat pe secțiune",
+  "side_panel_article_limit_label": "Limită articole"
 }

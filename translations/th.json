@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "ชื่อเรื่องเหนือสารบัญ",
   "table_of_contents_title_label": "หัวของสารบัญ",
   "separator_toggle_description": "รวมตัวคั่นในหัวข้อ",
-  "separator_toggle_label": "แสดงตัวคั่น"
+  "separator_toggle_label": "แสดงตัวคั่น",
+  "show_categories_description": "แสดงหมวดหมู่บนหน้าแรก",
+  "show_categories_label": "แสดงหมวดหมู่",
+  "side_panel_navigation_group_label": "การนำทางแผงด้านข้าง",
+  "show_articles_in_navigation_description": "แสดงบทความภายใต้หัวข้อในการนำทางแผงด้านข้าง",
+  "show_articles_in_navigation_label": "แสดงบทความในการนำทาง",
+  "side_panel_article_limit_description": "จำนวนบทความสูงสุดที่จะแสดงต่อหัวข้อ",
+  "side_panel_article_limit_label": "ขีดจำกัดบทความ"
 }

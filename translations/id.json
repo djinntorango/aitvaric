@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Judul di atas daftar isi",
   "table_of_contents_title_label": "Judul daftar isi",
   "separator_toggle_description": "Sertakan pemisah di header",
-  "separator_toggle_label": "Tampilkan pemisah"
+  "separator_toggle_label": "Tampilkan pemisah",
+  "show_categories_description": "Tampilkan kategori di halaman beranda",
+  "show_categories_label": "Tampilkan kategori",
+  "side_panel_navigation_group_label": "Navigasi panel samping",
+  "show_articles_in_navigation_description": "Tampilkan artikel di bawah bagian dalam navigasi panel samping",
+  "show_articles_in_navigation_label": "Tampilkan artikel dalam navigasi",
+  "side_panel_article_limit_description": "Jumlah maksimum artikel yang ditampilkan per bagian",
+  "side_panel_article_limit_label": "Batas artikel"
 }

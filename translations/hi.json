@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "सारणी के ऊपर का शीर्षक",
   "table_of_contents_title_label": "टेबल ऑफ कंटेंट्स टाइटल",
   "separator_toggle_description": "हैडर में सेपरेटर शामिल करें",
-  "separator_toggle_label": "सेपरेटर दिखाएं"
+  "separator_toggle_label": "सेपरेटर दिखाएं",
+  "show_categories_description": "होम पेज पर श्रेणियाँ दिखाएं",
+  "show_categories_label": "श्रेणियाँ दिखाएं",
+  "side_panel_navigation_group_label": "साइड पैनल नेविगेशन",
+  "show_articles_in_navigation_description": "साइड पैनल नेविगेशन में अनुभागों के अंतर्गत आर्टिकल प्रदर्शित करें",
+  "show_articles_in_navigation_label": "नेविगेशन में आर्टिकल दिखाएं",
+  "side_panel_article_limit_description": "प्रति अनुभाग प्रदर्शित करने के लिए आर्टिकल की अधिकतम संख्या",
+  "side_panel_article_limit_label": "आर्टिकल सीमा"
 }

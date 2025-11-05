@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Titeln ovanför innehållsförteckningen",
   "table_of_contents_title_label": "Innehållsförteckningens titel",
   "separator_toggle_description": "Inkludera avskiljaren i rubriken",
-  "separator_toggle_label": "Visa avskiljaren"
+  "separator_toggle_label": "Visa avskiljaren",
+  "show_categories_description": "Visa kategorier på startsidan",
+  "show_categories_label": "Visa kategorier",
+  "side_panel_navigation_group_label": "Sidpanelnavigering",
+  "show_articles_in_navigation_description": "Visa artiklar under sektioner i sidpanelnavigering",
+  "show_articles_in_navigation_label": "Visa artiklar i navigering",
+  "side_panel_article_limit_description": "Maximalt antal artiklar att visa per sektion",
+  "side_panel_article_limit_label": "Artikelgräns"
 }

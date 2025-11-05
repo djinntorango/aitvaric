@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "目录上方的标题",
   "table_of_contents_title_label": "目录标题",
   "separator_toggle_description": "在页眉中包含分隔符",
-  "separator_toggle_label": "显示分隔符"
+  "separator_toggle_label": "显示分隔符",
+  "show_categories_description": "在主页上显示类别",
+  "show_categories_label": "显示类别",
+  "side_panel_navigation_group_label": "侧面板导航",
+  "show_articles_in_navigation_description": "在侧面板导航的部分下显示文章",
+  "show_articles_in_navigation_label": "在导航中显示文章",
+  "side_panel_article_limit_description": "每个部分显示的最大文章数",
+  "side_panel_article_limit_label": "文章限制"
 }

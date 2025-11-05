@@ -732,15 +732,13 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
   // Get settings from the side-panel data attributes
   const sidePanel = document.querySelector('.side-panel');
-  const displayMode = sidePanel ? sidePanel.getAttribute('data-display-mode') : 'sections_only';
+  const showArticles = sidePanel ? sidePanel.getAttribute('data-show-articles') === 'true' : false;
   const articleLimit = sidePanel ? parseInt(sidePanel.getAttribute('data-article-limit'), 10) : 10;
-  const articlesExpanded = sidePanel ? sidePanel.getAttribute('data-articles-expanded') === 'true' : false;
 
   // Store settings globally for use in render functions
   window.sidePanelSettings = {
-    displayMode: displayMode,
-    articleLimit: articleLimit,
-    articlesExpanded: articlesExpanded
+    showArticles: showArticles,
+    articleLimit: articleLimit
   };
 
   // Make an API call to get categories using your domain
@@ -776,11 +774,10 @@ function fetchSectionsForCategories(categories) {
         // Process the sections data if needed
         const processedSections = processSectionsData(sectionsData);
 
-        // Check if we need to fetch articles based on display mode
-        const settings = window.sidePanelSettings || { displayMode: 'sections_only', articleLimit: 10 };
-        const shouldFetchArticles = settings.displayMode === 'both' || settings.displayMode === 'articles_only';
+        // Check if we need to fetch articles based on settings
+        const settings = window.sidePanelSettings || { showArticles: false, articleLimit: 10 };
 
-        if (shouldFetchArticles && processedSections.length > 0) {
+        if (settings.showArticles && processedSections.length > 0) {
           // Fetch articles for all sections in this category
           return fetchArticlesForSections(processedSections, settings.articleLimit)
             .then(() => {
@@ -992,6 +989,9 @@ function renderSections(sections, parentElement) {
       const subsectionsList = document.createElement('ul');
       subsectionsList.classList.add('subsections-list');
 
+      // Subsections start collapsed by default
+      subsectionsList.style.display = 'none';
+
       // Render subsections recursively
       renderSections(section.children, subsectionsList);
 
@@ -1018,11 +1018,8 @@ function renderArticles(articles, parentElement) {
   const articlesList = document.createElement('ul');
   articlesList.classList.add('articles-list');
 
-  // Check if articles should be initially expanded
-  const settings = window.sidePanelSettings || { articlesExpanded: false };
-  if (!settings.articlesExpanded) {
-    articlesList.style.display = 'none';
-  }
+  // Articles start collapsed by default
+  articlesList.style.display = 'none';
 
   articles.forEach(article => {
     const articleItem = document.createElement('li');
@@ -1055,8 +1052,9 @@ document.addEventListener('click', function (event) {
   const chevron = event.target;
   if (chevron.classList.contains('chevron')) {
     const parentSection = chevron.closest('.open-section');
-    const subsectionsList = parentSection.querySelector('.subsections-list');
-    const articlesList = parentSection.querySelector('.articles-list');
+    // Use :scope > to select only direct children, not nested descendants
+    const subsectionsList = parentSection.querySelector(':scope > .subsections-list');
+    const articlesList = parentSection.querySelector(':scope > .articles-list');
 
     // Toggle subsections if they exist
     if (subsectionsList) {

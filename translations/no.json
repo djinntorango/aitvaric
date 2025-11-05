@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Tittelen over innholdsfortegnelsen",
   "table_of_contents_title_label": "IF-tittel",
   "separator_toggle_description": "Inkluder separator i overskriften",
-  "separator_toggle_label": "Vis separator"
+  "separator_toggle_label": "Vis separator",
+  "show_categories_description": "Vis kategorier på startsiden",
+  "show_categories_label": "Vis kategorier",
+  "side_panel_navigation_group_label": "Sidepanel navigasjon",
+  "show_articles_in_navigation_description": "Vis artikler under seksjoner i sidepanel navigasjon",
+  "show_articles_in_navigation_label": "Vis artikler i navigasjon",
+  "side_panel_article_limit_description": "Maksimalt antall artikler å vise per seksjon",
+  "side_panel_article_limit_label": "Artikkelgrense"
 }

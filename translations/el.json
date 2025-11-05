@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Ο τίτλος πάνω από τον πίνακα περιεχομένων",
   "table_of_contents_title_label": "Τίτλος πίνακα περιεχομένων",
   "separator_toggle_description": "Συμπερίληψη του διαχωριστικού στην κεφαλίδα",
-  "separator_toggle_label": "Εμφάνιση διαχωριστικού"
+  "separator_toggle_label": "Εμφάνιση διαχωριστικού",
+  "show_categories_description": "Εμφάνιση κατηγοριών στην αρχική σελίδα",
+  "show_categories_label": "Εμφάνιση κατηγοριών",
+  "side_panel_navigation_group_label": "Πλοήγηση πλευρικού πίνακα",
+  "show_articles_in_navigation_description": "Εμφάνιση άρθρων κάτω από ενότητες στην πλοήγηση του πλευρικού πίνακα",
+  "show_articles_in_navigation_label": "Εμφάνιση άρθρων στην πλοήγηση",
+  "side_panel_article_limit_description": "Μέγιστος αριθμός άρθρων προς εμφάνιση ανά ενότητα",
+  "side_panel_article_limit_label": "Όριο άρθρων"
 }

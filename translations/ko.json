@@ -267,5 +267,12 @@
   "table_of_contents_title_description": "목차 위의 제목",
   "table_of_contents_title_label": "목차 제목",
   "separator_toggle_description": "헤더에 구분선 포함",
-  "separator_toggle_label": "구분선 표시"
+  "separator_toggle_label": "구분선 표시",
+  "show_categories_description": "홈 페이지에 카테고리 표시",
+  "show_categories_label": "카테고리 표시",
+  "side_panel_navigation_group_label": "사이드 패널 탐색",
+  "show_articles_in_navigation_description": "사이드 패널 탐색의 섹션 아래에 기사 표시",
+  "show_articles_in_navigation_label": "탐색에 기사 표시",
+  "side_panel_article_limit_description": "섹션당 표시할 기사의 최대 수",
+  "side_panel_article_limit_label": "기사 제한"
 }

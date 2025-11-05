@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "El título encima de la tabla de contenidos",
   "table_of_contents_title_label": "Título de la tabla de contenidos",
   "separator_toggle_description": "Incluye el separador en el encabezado",
-  "separator_toggle_label": "Mostrar separador"
+  "separator_toggle_label": "Mostrar separador",
+  "show_categories_description": "Mostrar categorías en la página de inicio",
+  "show_categories_label": "Mostrar categorías",
+  "side_panel_navigation_group_label": "Navegación del panel lateral",
+  "show_articles_in_navigation_description": "Mostrar artículos bajo secciones en la navegación del panel lateral",
+  "show_articles_in_navigation_label": "Mostrar artículos en navegación",
+  "side_panel_article_limit_description": "Número máximo de artículos a mostrar por sección",
+  "side_panel_article_limit_label": "Límite de artículos"
 }

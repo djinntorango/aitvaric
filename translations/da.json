@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Overskriften over indholdsfortegnelsen",
   "table_of_contents_title_label": "Indholdsfortegnelsestitel",
   "separator_toggle_description": "Inkluder adskilleren i overskriften",
-  "separator_toggle_label": "Vis adskiller"
+  "separator_toggle_label": "Vis adskiller",
+  "show_categories_description": "Vis kategorier på hjemmesiden",
+  "show_categories_label": "Vis kategorier",
+  "side_panel_navigation_group_label": "Sidepanel navigation",
+  "show_articles_in_navigation_description": "Vis artikler under sektioner i sidepanel navigation",
+  "show_articles_in_navigation_label": "Vis artikler i navigation",
+  "side_panel_article_limit_description": "Maksimalt antal artikler at vise pr. sektion",
+  "side_panel_article_limit_label": "Artikelgrænse"
 }

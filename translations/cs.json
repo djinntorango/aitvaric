@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Nadpis nad obsahem",
   "table_of_contents_title_label": "Nadpis obsahu",
   "separator_toggle_description": "Zahrnout oddělovač v záhlaví",
-  "separator_toggle_label": "Zobrazit oddělovač"
+  "separator_toggle_label": "Zobrazit oddělovač",
+  "show_categories_description": "Zobrazit kategorie na domovské stránce",
+  "show_categories_label": "Zobrazit kategorie",
+  "side_panel_navigation_group_label": "Navigace bočního panelu",
+  "show_articles_in_navigation_description": "Zobrazit články pod sekcemi v navigaci bočního panelu",
+  "show_articles_in_navigation_label": "Zobrazit články v navigaci",
+  "side_panel_article_limit_description": "Maximální počet článků k zobrazení na sekci",
+  "side_panel_article_limit_label": "Limit článků"
 }

@@ -5289,6 +5289,41 @@ background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg"
   margin-left: 20px; /* Add left margin to move it away from the parent */
 }
 
+/* Articles list styling */
+.articles-list {
+  list-style: none;
+  padding-left: 20px;
+  margin-left: 20px;
+  display: none; /* Hide articles by default */
+}
+
+.article-item {
+  padding: 5px 0;
+}
+
+.article-link {
+  font-size: 0.85em; /* Smaller font to indicate hierarchy below sections */
+  color: var(--link-color);
+  text-decoration: none;
+  display: block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.article-link:hover {
+  background-color: var(--background-accent-color);
+  color: var(--hover-link-color);
+}
+
+.article-promoted {
+  font-weight: 500;
+}
+
+.article-internal .article-link {
+  opacity: 0.7;
+}
+
 /**** Search & Crumbs in Side Panel ****/
 .sub-nav {
   align-items: baseline;

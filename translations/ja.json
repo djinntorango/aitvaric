@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "目次の上のタイトル",
   "table_of_contents_title_label": "目次のタイトル",
   "separator_toggle_description": "ヘッダーに区切り線を含める",
-  "separator_toggle_label": "区切り線の表示"
+  "separator_toggle_label": "区切り線の表示",
+  "show_categories_description": "ホームページにカテゴリを表示",
+  "show_categories_label": "カテゴリを表示",
+  "side_panel_navigation_group_label": "サイドパネルナビゲーション",
+  "show_articles_in_navigation_description": "サイドパネルナビゲーションのセクション下に記事を表示",
+  "show_articles_in_navigation_label": "ナビゲーションに記事を表示",
+  "side_panel_article_limit_description": "セクションごとに表示する記事の最大数",
+  "side_panel_article_limit_label": "記事の上限"
 }

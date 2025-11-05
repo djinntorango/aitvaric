@@ -268,5 +268,12 @@
   "table_of_contents_title_description": "הכותרת מעל לתוכן",
   "table_of_contents_title_label": "כותרת תוכן",
   "separator_toggle_description": "כלול את המפריד בכותרת",
-  "separator_toggle_label": "הצג מפריד"
+  "separator_toggle_label": "הצג מפריד",
+  "show_categories_description": "הצג קטגוריות בדף הבית",
+  "show_categories_label": "הצג קטגוריות",
+  "side_panel_navigation_group_label": "ניווט בפאנל הצדדי",
+  "show_articles_in_navigation_description": "הצג מאמרים תחת קטעים בניווט הפאנל הצדדי",
+  "show_articles_in_navigation_label": "הצג מאמרים בניווט",
+  "side_panel_article_limit_description": "מספר מקסימלי של מאמרים להצגה בכל קטע",
+  "side_panel_article_limit_label": "הגבלת מאמרים"
 }

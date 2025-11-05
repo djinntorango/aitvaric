@@ -231,5 +231,12 @@
   "table_of_contents_title_description": "Заголовок над змістом",
   "table_of_contents_title_label": "Заголовок змісту",
   "separator_toggle_description": "Включити роздільник в заголовку",
-  "separator_toggle_label": "Показати роздільник"
+  "separator_toggle_label": "Показати роздільник",
+  "show_categories_description": "Показати категорії на головній сторінці",
+  "show_categories_label": "Показати категорії",
+  "side_panel_navigation_group_label": "Навігація бічної панелі",
+  "show_articles_in_navigation_description": "Відображати статті під розділами в навігації бічної панелі",
+  "show_articles_in_navigation_label": "Показати статті в навігації",
+  "side_panel_article_limit_description": "Максимальна кількість статей для відображення в розділі",
+  "side_panel_article_limit_label": "Ліміт статей"
 }

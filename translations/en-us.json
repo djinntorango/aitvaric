@@ -225,5 +225,10 @@
   "separator_toggle_description": "Include the separator in the header",
   "separator_toggle_label": "Show separator",
   "show_categories_description": "Show categories on the home page",
-  "show_categories_label": "Show categories"
+  "show_categories_label": "Show categories",
+  "side_panel_navigation_group_label": "Side panel navigation",
+  "show_articles_in_navigation_description": "Display articles under sections in the side panel navigation",
+  "show_articles_in_navigation_label": "Show articles in navigation",
+  "side_panel_article_limit_description": "Maximum number of articles to display per section",
+  "side_panel_article_limit_label": "Article limit"
 }

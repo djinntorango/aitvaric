@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Der Titel über dem Inhaltsverzeichnis",
   "table_of_contents_title_label": "IVerzeichnistitel",
   "separator_toggle_description": "Fügen Sie den Trennstrich im Header ein",
-  "separator_toggle_label": "Separator anzeigen"
+  "separator_toggle_label": "Separator anzeigen",
+  "show_categories_description": "Kategorien auf der Startseite anzeigen",
+  "show_categories_label": "Kategorien anzeigen",
+  "side_panel_navigation_group_label": "Seitenpanel-Navigation",
+  "show_articles_in_navigation_description": "Artikel unter Sektionen in der Seitenpanel-Navigation anzeigen",
+  "show_articles_in_navigation_label": "Artikel in Navigation anzeigen",
+  "side_panel_article_limit_description": "Maximale Anzahl der Artikel pro Sektion",
+  "side_panel_article_limit_label": "Artikellimit"
 }

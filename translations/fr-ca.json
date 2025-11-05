@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Le titre au-dessus de la table des matières",
   "table_of_contents_title_label": "Titre de la table des matières",
   "separator_toggle_description": "Inclure le séparateur dans l'en-tête",
-  "separator_toggle_label": "Afficher le séparateur"
+  "separator_toggle_label": "Afficher le séparateur",
+  "show_categories_description": "Afficher les catégories sur la page d'accueil",
+  "show_categories_label": "Afficher les catégories",
+  "side_panel_navigation_group_label": "Navigation du panneau latéral",
+  "show_articles_in_navigation_description": "Afficher les articles sous les sections dans la navigation du panneau latéral",
+  "show_articles_in_navigation_label": "Afficher les articles dans la navigation",
+  "side_panel_article_limit_description": "Nombre maximum d'articles à afficher par section",
+  "side_panel_article_limit_label": "Limite d'articles"
 }

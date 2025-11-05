@@ -1,7 +1,7 @@
 {
   "name": "Aitvaric",
   "author": "Torango.io",
-  "version": "1.0.57",
+  "version": "1.0.58",
   "api_version": 2,
   "default_locale": "en-us",
   "settings": [
@@ -936,25 +936,11 @@
       "label": "side_panel_navigation_group_label",
       "variables": [
         {
-          "identifier": "side_panel_display_mode",
-          "type": "list",
-          "description": "side_panel_display_mode_description",
-          "label": "side_panel_display_mode_label",
-          "value": "sections_only",
-          "options": [
-            {
-              "label": "side_panel_sections_only_label",
-              "value": "sections_only"
-            },
-            {
-              "label": "side_panel_articles_only_label",
-              "value": "articles_only"
-            },
-            {
-              "label": "side_panel_both_label",
-              "value": "both"
-            }
-          ]
+          "identifier": "show_articles_in_navigation",
+          "type": "checkbox",
+          "description": "show_articles_in_navigation_description",
+          "label": "show_articles_in_navigation_label",
+          "value": false
         },
         {
           "identifier": "side_panel_article_limit",
@@ -980,13 +966,6 @@
               "value": "30"
             }
           ]
-        },
-        {
-          "identifier": "side_panel_articles_expanded",
-          "type": "checkbox",
-          "description": "side_panel_articles_expanded_description",
-          "label": "side_panel_articles_expanded_label",
-          "value": false
         }
       ]
     },

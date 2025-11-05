@@ -7,7 +7,9 @@
     <!-- Categories will be dynamically added here -->
   </ul>
 </div>
-<aside class="side-panel">
+<aside class="side-panel"
+       data-show-articles="{{settings.show_articles_in_navigation}}"
+       data-article-limit="{{settings.side_panel_article_limit}}">
     <nav class="sub-nav">
       <div class="search-container">
         {{search scoped=settings.scoped_community_search submit=false}}

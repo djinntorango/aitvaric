@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "目錄上方的標題",
   "table_of_contents_title_label": "目錄標題",
   "separator_toggle_description": "在頁首包含分隔符",
-  "separator_toggle_label": "顯示分隔符"
+  "separator_toggle_label": "顯示分隔符",
+  "show_categories_description": "在首頁上顯示類別",
+  "show_categories_label": "顯示類別",
+  "side_panel_navigation_group_label": "側邊面板導航",
+  "show_articles_in_navigation_description": "在側邊面板導航的部分下顯示文章",
+  "show_articles_in_navigation_label": "在導航中顯示文章",
+  "side_panel_article_limit_description": "每個部分顯示的最大文章數",
+  "side_panel_article_limit_label": "文章限制"
 }

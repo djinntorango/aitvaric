@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "İçindekiler tablosunun üstündeki başlık",
   "table_of_contents_title_label": "İçindekiler tablosu başlığı",
   "separator_toggle_description": "Başlıkta ayırıcıyı içerir",
-  "separator_toggle_label": "Ayırıcıyı göster"
+  "separator_toggle_label": "Ayırıcıyı göster",
+  "show_categories_description": "Ana sayfada kategorileri göster",
+  "show_categories_label": "Kategorileri göster",
+  "side_panel_navigation_group_label": "Yan panel gezinme",
+  "show_articles_in_navigation_description": "Yan panel gezinmesinde bölümler altında makaleleri göster",
+  "show_articles_in_navigation_label": "Gezinmede makaleleri göster",
+  "side_panel_article_limit_description": "Bölüm başına gösterilecek maksimum makale sayısı",
+  "side_panel_article_limit_label": "Makale limiti"
 }

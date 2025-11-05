@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "Tiêu đề phía trên bảng mục",
   "table_of_contents_title_label": "Tiêu đề bảng mục",
   "separator_toggle_description": "Bao gồm phân tách trong tiêu đề",
-  "separator_toggle_label": "Hiển thị phân tách"
+  "separator_toggle_label": "Hiển thị phân tách",
+  "show_categories_description": "Hiển thị danh mục trên trang chủ",
+  "show_categories_label": "Hiển thị danh mục",
+  "side_panel_navigation_group_label": "Điều hướng bảng bên",
+  "show_articles_in_navigation_description": "Hiển thị bài viết dưới các phần trong điều hướng bảng bên",
+  "show_articles_in_navigation_label": "Hiển thị bài viết trong điều hướng",
+  "side_panel_article_limit_description": "Số lượng bài viết tối đa hiển thị mỗi phần",
+  "side_panel_article_limit_label": "Giới hạn bài viết"
 }

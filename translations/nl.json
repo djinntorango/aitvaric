@@ -269,5 +269,12 @@
   "table_of_contents_title_description": "De titel boven de inhoudsopgave",
   "table_of_contents_title_label": "Titel inhoudsopgave",
   "separator_toggle_description": "Inclusief de scheider in de koptekst",
-  "separator_toggle_label": "Scheider tonen"
+  "separator_toggle_label": "Scheider tonen",
+  "show_categories_description": "Categorieën weergeven op de startpagina",
+  "show_categories_label": "Categorieën weergeven",
+  "side_panel_navigation_group_label": "Zijpaneel navigatie",
+  "show_articles_in_navigation_description": "Artikelen onder secties weergeven in de zijpaneel navigatie",
+  "show_articles_in_navigation_label": "Artikelen weergeven in navigatie",
+  "side_panel_article_limit_description": "Maximum aantal artikelen per sectie",
+  "side_panel_article_limit_label": "Artikellimiet"
 }
