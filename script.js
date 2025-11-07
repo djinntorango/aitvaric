@@ -729,6 +729,42 @@ document.addEventListener("DOMContentLoaded", function () {
 // Store your domain in a var to use in api requests for category/section data
   var domain = window.location.hostname;
 
+// Helper functions for sessionStorage caching
+function getCachedNavigation() {
+  try {
+    const cached = sessionStorage.getItem('zendesk_nav_cache_v1');
+    if (cached) {
+      const parsedData = JSON.parse(cached);
+      // Check if cached data matches current settings
+      const sidePanel = document.querySelector('.side-panel');
+      const showArticles = sidePanel ? sidePanel.getAttribute('data-show-articles') === 'true' : false;
+      const articleLimit = sidePanel ? parseInt(sidePanel.getAttribute('data-article-limit'), 10) : 10;
+
+      // Invalidate cache if settings changed
+      if (parsedData.settings &&
+          parsedData.settings.showArticles === showArticles &&
+          parsedData.settings.articleLimit === articleLimit) {
+        return parsedData;
+      }
+    }
+  } catch (e) {
+    console.error('Error reading navigation cache:', e);
+  }
+  return null;
+}
+
+function setCachedNavigation(data, settings) {
+  try {
+    sessionStorage.setItem('zendesk_nav_cache_v1', JSON.stringify({
+      categories: data,
+      settings: settings,
+      timestamp: Date.now()
+    }));
+  } catch (e) {
+    console.error('Error writing navigation cache:', e);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   // Get settings from the side-panel data attributes
   const sidePanel = document.querySelector('.side-panel');
@@ -741,7 +777,15 @@ document.addEventListener('DOMContentLoaded', function () {
     articleLimit: articleLimit
   };
 
-  // Make an API call to get categories using your domain
+  // Check for cached navigation data first
+  const cachedData = getCachedNavigation();
+  if (cachedData && cachedData.categories) {
+    // Use cached data for instant render
+    renderCategories({ categories: cachedData.categories });
+    return;
+  }
+
+  // No cache - make an API call to get categories using your domain
   const apiUrl = `https://${domain}/api/v2/help_center/categories?per_page=100.json`;
 
   fetch(apiUrl)
@@ -754,6 +798,9 @@ document.addEventListener('DOMContentLoaded', function () {
       return fetchSectionsForCategories(processedData.categories);
     })
     .then(updatedCategories => {
+      // Cache the navigation data for this session
+      setCachedNavigation(updatedCategories, window.sidePanelSettings);
+
       // Render categories into the template after fetching sections for all categories
       renderCategories({ categories: updatedCategories });
     })
